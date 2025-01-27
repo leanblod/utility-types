@@ -1,0 +1,16 @@
+{
+    "name": "@leanblod/utility-types",
+    "version": "1.0.0",
+    "type": "module",
+    "private": false,
+    "scripts": {
+        "test": "tsc --build tests/index.d.ts"
+    },
+    "keywords": [],
+    "author": "leanblod",
+    "license": "ISC",
+    "description": "Utility types for TypeScript projects (`.d.ts` files only)",
+    "devDependencies": {
+        "typescript": "^5.7.3"
+    }
+}
