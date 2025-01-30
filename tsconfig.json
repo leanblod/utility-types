@@ -1,0 +1,14 @@
+{
+    "include": [
+        "src/**/*",
+        "tests/**/*",
+    ],
+    "compileOnSave": true,
+    "compilerOptions": {
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "strict": true,
+    }
+}
