@@ -1,1 +1,1 @@
-export type IfNeverElse<Value, Else> = [Value, never] extends [never, never] ? Else : Value;
+export type IfNeverElse<SomeType, Else> = [SomeType] extends [never] ? Else : SomeType;
