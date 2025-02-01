@@ -34,4 +34,3 @@ Expect.Accepts<
 Expect.Accepts<
     Keys.ToTuple<{}>
 >([]);
-
