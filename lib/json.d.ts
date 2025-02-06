@@ -1,4 +1,4 @@
-import type { Keys } from '../lib';
+import type { Keys } from '.';
 export type { JsonStringify as Stringify, JsonParsable as Value };
 
 type JsonStringify<JS extends JsonParsable> =

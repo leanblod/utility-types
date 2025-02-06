@@ -1,4 +1,5 @@
-import { Expect, Keys } from '../lib';
+import { Keys, Satisfies } from '../lib';
+import { expectAccepts } from '.';
 
 type TestObject = {
     key1: string,
@@ -6,31 +7,31 @@ type TestObject = {
     key3: string,
 }
 
-type TestKeysTuple = Expect.Satisfies<
+type TestKeysTuple = Satisfies<
     Keys.ToTuple<TestObject>,
     ["key2", "key1", "key3"] | ["key3", "key1", "key2"]
 >;
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<TestObject>
 >(["key1", "key2", "key3"]);
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<TestObject, 'key1'>
 >(['key1']);
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<TestObject, 'key1' | 'key2'>
 >(['key2', 'key1']);
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<TestObject, never>
 >([]);
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<{}, never>
 >([]);
 
-Expect.Accepts<
+expectAccepts<
     Keys.ToTuple<{}>
 >([]);

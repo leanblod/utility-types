@@ -6,10 +6,21 @@
     "scripts": {
         "test": "tsc --build"
     },
-    "keywords": [],
+    "files": [
+        "lib/**/*"
+    ],
+    "types": "./lib/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./lib/index.d.ts"
+        }
+    },
+    "keywords": [
+        "typescript"
+    ],
     "author": "leanblod",
     "license": "ISC",
-    "description": "Utility types for TypeScript projects (`.d.ts` files only)",
+    "description": "Some fun types to develop, no really useful though (`.d.ts` files only)",
     "devDependencies": {
         "tsd": "^0.31.2",
         "typescript": "^5.7.3"

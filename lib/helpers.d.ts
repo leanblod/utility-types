@@ -1,4 +1,12 @@
 /**
+ * Maps a type to itself, but throws compilation error if the `Target` type do
+ * not satsify the `Constraint` type
+ * @param Constraint The constraint to check against
+ * @param {Constriaint} Target The type that must satisfy the constraint
+ */
+export type Satisfies<Constraint, Target extends Constraint> = Target;
+
+/**
  * It maps to the `Else` generic if the `SomeType` generic is `never`,
  * otherwise it maps to `SomeType`
  */

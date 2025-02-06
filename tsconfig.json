@@ -5,6 +5,8 @@
     ],
     "compileOnSave": true,
     "compilerOptions": {
+        "incremental": false,
+        "composite": false,
         "noEmit": true,
         "allowImportingTsExtensions": true,
         "noImplicitAny": true,

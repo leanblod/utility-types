@@ -1,13 +1,19 @@
-import { Expect, Values } from '../lib';
+import { Satisfies, Values } from '../lib';
+import { expectAccepts } from '.';
 
-type TestValuesTuple = Expect.Satisfies<
+type TestObject = {
+    key1: string,
+    key2: boolean,
+    key3: string,
+}
+
+type TestValuesTuple = Satisfies<
     [string, boolean, string],
-    Values.ToTuple<{
-        key1: string,
-        key2: boolean,
-        key3: string,
-    }, ['key1', 'key2', 'key3']>
+    Values.ToTuple<
+        TestObject,
+        ['key1', 'key2', 'key3']
+    >
 >;
 
-Expect.Accepts<TestValuesTuple>(["value1", true, "value2"]);
-Expect.Accepts<Values.ToTuple<{}, []>>([]);
+expectAccepts<TestValuesTuple>(["value1", true, "value2"]);
+expectAccepts<Values.ToTuple<{}, []>>([]);
