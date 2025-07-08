@@ -1,16 +1,30 @@
 {
+    "compileOnSave": true,
+    "compilerOptions": {
+        // Output
+        "noEmit": true,
+
+        // Debugging
+        "downlevelIteration": true,
+        "extendedDiagnostics": true,
+        "noErrorTruncation": true,
+        
+        // Module resolution options
+        "allowImportingTsExtensions": true,
+        
+        // Type checking
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true,
+        "noImplicitAny": true,
+        "noImplicitOverride": true,
+        "exactOptionalPropertyTypes": true,
+        "forceConsistentCasingInFileNames": true,
+    },
     "include": [
         "src/**/*",
         "tests/**/*",
     ],
-    "compileOnSave": true,
-    "compilerOptions": {
-        "incremental": false,
-        "composite": false,
-        "noEmit": true,
-        "allowImportingTsExtensions": true,
-        "noImplicitAny": true,
-        "noImplicitOverride": true,
-        "strict": true,
-    }
 }
